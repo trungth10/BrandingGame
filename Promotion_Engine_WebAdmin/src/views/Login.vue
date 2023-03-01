@@ -101,6 +101,7 @@ export default {
       loginForm: {
         username: "",
         password: "",
+        roleName: "",
       },
     };
   },

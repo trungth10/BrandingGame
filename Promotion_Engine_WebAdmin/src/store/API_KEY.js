@@ -1,1 +1,1 @@
-export const API_URL = "https://api-promotion-engine.reso.vn/";
+export const API_URL = "https://brandinggame.azurewebsites.net/";
