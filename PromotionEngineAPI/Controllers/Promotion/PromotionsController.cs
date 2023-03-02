@@ -253,6 +253,7 @@ namespace PromotionEngineAPI.Controllers
         }
         [HttpGet]
         //[Authorize]
+        [Authorize]
         public async Task<IActionResult> GetPromotion(
             [FromQuery] PagingRequestParam param,
             [FromQuery] Guid BrandId,
@@ -381,6 +382,7 @@ namespace PromotionEngineAPI.Controllers
 
         }
         //[Authorize]
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPromotion([FromRoute] Guid id, [FromBody] PromotionDto dto)
         {
@@ -411,6 +413,7 @@ namespace PromotionEngineAPI.Controllers
         }
         //[Authorize]
         // POST: api/Promotions
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> PostPromotion([FromBody] PromotionDto dto)
         {
@@ -427,6 +430,7 @@ namespace PromotionEngineAPI.Controllers
         }
         //[Authorize]
         // DELETE: api/Promotions/5
+        [Authorize]
         [HttpDelete]
         [Route("{id}")]
         public async Task<IActionResult> DeletePromotion([FromRoute] Guid id)

@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper.Configuration;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using System.IO;
 
 namespace Infrastructure.Models
 {
@@ -49,7 +52,12 @@ namespace Infrastructure.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-
+                IConfigurationRoot configuration = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+                var connectionString = configuration.GetConnectionString("PromotionEngineDatabase");
+                optionsBuilder.UseSqlServer(connectionString);
             }
         }
 

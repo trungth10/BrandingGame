@@ -12,8 +12,6 @@ namespace Infrastructure.Helper
         {
             public const string HIDE = "1";
             public const string UNHIDE = "0";
-
-
         }
         public const string ACTIVE = "1";
         public const string UNREDEMPED = "0";

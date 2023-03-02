@@ -85,6 +85,7 @@ namespace PromotionEngineAPI.Controllers
         }
 
         // POST: api/Accounts
+        
         [HttpPost]
         [Route("register")]
         public async Task<IActionResult> RegisterAccount([FromBody] AccountDto dto)

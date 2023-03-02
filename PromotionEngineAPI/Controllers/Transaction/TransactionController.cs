@@ -2,6 +2,7 @@
 using ApplicationCore.Services;
 using Infrastructure.DTOs;
 using Infrastructure.Helper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Net;
@@ -21,7 +22,8 @@ namespace PromotionEngineAPI.Controllers
         {
             _service = service;
         }
-        //[Authorize]
+        
+        [Authorize]
         [HttpPost]
         [Route("check-out")]
         public async Task<IActionResult> Checkout([FromBody] Order order, [FromQuery] Guid brandId, [FromQuery] Guid deviceId)

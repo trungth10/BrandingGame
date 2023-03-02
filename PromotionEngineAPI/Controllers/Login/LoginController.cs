@@ -14,7 +14,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace PromotionEngineAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/login")]
     [ApiController]
     public class LoginController : ControllerBase
     {

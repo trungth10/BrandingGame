@@ -12,7 +12,7 @@ namespace PromotionEngineAPI.Controllers
 {
     [Route("api/condition-rules")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class ConditionRulesController : ControllerBase
     {
         private readonly IConditionRuleService _service;
