@@ -3,7 +3,7 @@ import request from "../request";
 class AuthService {
   async login(user) {
     return request
-      .post("api/Login", user)
+      .post("api/login", user)
       .then((response) => {
         if (response.status == 200) {
           return response.data;
