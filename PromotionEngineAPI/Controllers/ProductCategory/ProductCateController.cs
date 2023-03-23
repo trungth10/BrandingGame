@@ -14,7 +14,7 @@ namespace PromotionEngineAPI.Controllers.ProductCategory
 {
     [Route("api/product-category")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class ProductCateController : ControllerBase
     {
 

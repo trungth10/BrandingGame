@@ -14,7 +14,7 @@ namespace PromotionEngineAPI.Controllers
 {
     [Route("api/actions")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class ActionsController : ControllerBase
     {
         private readonly IActionService _service;

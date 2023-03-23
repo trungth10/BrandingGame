@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PromotionEngineAPI.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/game-campaign")]
     [ApiController]
     public class GameCampaignController : ControllerBase

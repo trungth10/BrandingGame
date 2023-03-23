@@ -14,7 +14,7 @@ namespace PromotionEngineAPI.Controllers
 {
     [Route("api/member-level")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class MemberLevelController : ControllerBase
     {
         private readonly IMemberLevelService _service;

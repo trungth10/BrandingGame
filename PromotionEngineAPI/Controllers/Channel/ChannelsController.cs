@@ -45,7 +45,7 @@ namespace PromotionEngineAPI.Controllers
         }
         [HttpPost]
         [Route("checkChannelCodeExist")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> CheckChannelExisting([FromBody] DuplicateParam param)
         {
             bool isExisting = false;
@@ -58,7 +58,7 @@ namespace PromotionEngineAPI.Controllers
         // GET: api/Channels/count
         [HttpGet]
         [Route("count")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> CountChannel([FromQuery] Guid BrandId)
         {
             return Ok(await _service.CountAsync(el => !el.DelFlg && el.BrandId.Equals(BrandId)));
@@ -66,7 +66,7 @@ namespace PromotionEngineAPI.Controllers
 
         // GET: api/Channels/5
         [HttpGet("{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> GetChannel([FromRoute] Guid id)
         {
             var result = await _service.GetByIdAsync(id);
@@ -79,7 +79,7 @@ namespace PromotionEngineAPI.Controllers
 
         // PUT: api/Channels/5
         [HttpPut("{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> PutChannel([FromRoute] Guid id, [FromBody] ChannelDto dto)
         {
             if (id != dto.ChannelId)
@@ -102,7 +102,7 @@ namespace PromotionEngineAPI.Controllers
 
         // POST: api/Channels
         [HttpPost]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> PostChannel([FromBody] ChannelDto dto)
         {
             dto.ChannelId = Guid.NewGuid();
@@ -123,7 +123,7 @@ namespace PromotionEngineAPI.Controllers
 
         // DELETE: api/Channels/5
         [HttpDelete]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> DeleteChannel([FromQuery] Guid id)
         {
             if (id == null)

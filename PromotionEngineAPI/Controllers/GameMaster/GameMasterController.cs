@@ -10,7 +10,7 @@ namespace PromotionEngineAPI.Controllers.GameMaster
 {
     [Route("api/game-master")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class GameMasterController : ControllerBase
     {
         private readonly IGameMasterService _service;

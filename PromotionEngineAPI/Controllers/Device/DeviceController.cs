@@ -27,7 +27,7 @@ namespace PromotionEngineAPI.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> GetDevice([FromQuery] PagingRequestParam param, [FromQuery] Guid storeId)
         {
             try

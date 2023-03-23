@@ -9,7 +9,7 @@ namespace PromotionEngineAPI.Controllers.Statistic
 {
     [Route("api/statistic")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class StatisticController : ControllerBase
     {
         private readonly IPromotionService _promotionService;

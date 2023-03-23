@@ -46,12 +46,15 @@ namespace PromotionEngineAPI
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials()
-                        .WithOrigins("http://localhost:8080")
-                        .WithOrigins("https://manage-pe.reso.vn")
-                        .WithOrigins("https://stg-admin.unilo.net")
-                        .WithOrigins("https://stg-api.beanoi.com")
-                        .WithOrigins("https://stg-manage-pe.reso.vn");
-
+                        //.WithOrigins("http://localhost:8080")
+                        //.WithOrigins("https://manage-pe.reso.vn")
+                        //.WithOrigins("https://stg-admin.unilo.net")
+                        //.WithOrigins("https://stg-api.beanoi.com")
+                        //.WithOrigins("https://stg-manage-pe.reso.vn");
+                        //change cors
+                        .WithOrigins("http://localhost:8000")
+                        .WithOrigins("http://http://brandinggame.azurewebsites.net")
+                        .WithOrigins("https://branding-game.netlify.app");
                 });
             });
             services.AddAuthentication(x =>

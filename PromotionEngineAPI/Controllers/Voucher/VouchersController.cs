@@ -250,7 +250,7 @@ namespace PromotionEngineAPI.Controllers
 
         // GET: api/Vouchers/5
         [HttpGet("{id}")]
-        [Authorize]
+        //[Authorize]
         public async Task<IActionResult> GetVoucher([FromRoute] Guid id)
         {
             try

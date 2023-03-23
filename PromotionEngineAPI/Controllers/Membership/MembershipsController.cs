@@ -10,7 +10,7 @@ namespace PromotionEngineAPI.Controllers
 {
     [Route("api/memberships")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class MembershipsController : ControllerBase
     {
         private readonly IMembershipService _service;

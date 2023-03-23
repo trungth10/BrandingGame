@@ -253,7 +253,6 @@ namespace PromotionEngineAPI.Controllers
         }
         [HttpGet]
         //[Authorize]
-        [Authorize]
         public async Task<IActionResult> GetPromotion(
             [FromQuery] PagingRequestParam param,
             [FromQuery] Guid BrandId,
@@ -279,7 +278,7 @@ namespace PromotionEngineAPI.Controllers
 
         // GET: api/Promotions/count
         [HttpGet]
-        [Authorize]
+        //[Authorize]
         [Route("countSearch")]
         public async Task<IActionResult> CountPromotion([FromQuery] SearchPagingRequestParam param, [FromQuery] Guid BrandId)
         {
@@ -298,7 +297,7 @@ namespace PromotionEngineAPI.Controllers
 
         // GET: api/Promotions
         [HttpGet]
-        [Authorize]
+        //[Authorize]
         [Route("search")]
         // api/Promotions?SearchContent=...?pageIndex=...&pageSize=...
         public async Task<IActionResult> SearchPromotion(
@@ -331,7 +330,7 @@ namespace PromotionEngineAPI.Controllers
 
         // GET: api/Promotions/count
         [HttpGet]
-        [Authorize]
+        //[Authorize]
         [Route("count")]
         public async Task<IActionResult> CountSearchResultPromotion([FromQuery] string status, [FromQuery] Guid brandId)
         {
@@ -382,7 +381,6 @@ namespace PromotionEngineAPI.Controllers
 
         }
         //[Authorize]
-        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutPromotion([FromRoute] Guid id, [FromBody] PromotionDto dto)
         {
@@ -413,7 +411,6 @@ namespace PromotionEngineAPI.Controllers
         }
         //[Authorize]
         // POST: api/Promotions
-        [Authorize]
         [HttpPost]
         public async Task<IActionResult> PostPromotion([FromBody] PromotionDto dto)
         {
@@ -430,7 +427,6 @@ namespace PromotionEngineAPI.Controllers
         }
         //[Authorize]
         // DELETE: api/Promotions/5
-        [Authorize]
         [HttpDelete]
         [Route("{id}")]
         public async Task<IActionResult> DeletePromotion([FromRoute] Guid id)
