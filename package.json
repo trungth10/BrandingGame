@@ -1,0 +1,81 @@
+{
+  "name": "vue-argon-dashboard",
+  "version": "1.1.1",
+  "private": true,
+  "scripts": {
+    "serve": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
+    "start": "node main.js",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@microsoft/signalr": "^5.0.3",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.5.0",
+    "bootstrap-icons": "^1.3.0",
+    "bootstrap-vue": "^2.15.0",
+    "chart.js": "2.9.3",
+    "core-js": "3.6.5",
+    "debounce": "^1.2.0",
+    "element-ui": "^2.14.1",
+    "es6-promise": "^4.2.8",
+    "express": "^4.17.1",
+    "firebase": "^8.2.2",
+    "flatpickr": "4.6.3",
+    "moment": "^2.29.1",
+    "ng2-tooltip-directive": "^2.9.22",
+    "nouislider": "14.6.0",
+    "register-service-worker": "1.7.1",
+    "vue": "^2.6.11",
+    "vue-axios": "^3.2.0",
+    "vue-chartjs": "3.5.0",
+    "vue-clipboard2": "0.3.1",
+    "vue-drag-tree": "^1.1.9",
+    "vue-flatpickr-component": "8.1.5",
+    "vue-numeral-filter": "^2.0.0",
+    "vue-router": "3.3.4",
+    "vue-session": "^1.0.0",
+    "vue2-transitions": "0.3.0",
+    "vuedraggable": "^2.24.3",
+    "vuex": "^3.6.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.4.6",
+    "@vue/cli-plugin-eslint": "^4.4.6",
+    "@vue/cli-plugin-pwa": "^4.4.6",
+    "@vue/cli-service": "^4.4.6",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.3.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "sass": "^1.58.3",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-unused-vars": "error"
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
