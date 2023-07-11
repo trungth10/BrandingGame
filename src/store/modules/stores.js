@@ -17,7 +17,7 @@ export const stores = {
     storeName: "",
     group: 0,
     storeId: "",
-    BrandId: "",
+    brandId: "",
   },
   getters: {
     StoreList: (state) => state.storeList,
@@ -65,7 +65,7 @@ export const stores = {
       state.counter = context;
     },
     setBrandId(state, context) {
-      state.BrandId = context;
+      state.brandId = context;
     },
     setStoreId(state, context) {
       state.storeId = context;
@@ -86,7 +86,7 @@ export const stores = {
   },
   actions: {
     async countStores({ commit }) {
-      let BrandId = this.state.stores.BrandId;
+      let BrandId = this.state.stores.brandId;
       await axios
         .get(API_URL + "api/Stores/count", {
           params: {
@@ -101,7 +101,7 @@ export const stores = {
     async getStoresList({ commit }) {
       let PageSize = this.state.stores.PageSize;
       let PageIndex = this.state.stores.PageIndex;
-      let BrandId = this.state.stores.BrandId;
+      let BrandId = this.state.stores.brandId;
 
       //# get store depends on pageIndex
       return await axios
