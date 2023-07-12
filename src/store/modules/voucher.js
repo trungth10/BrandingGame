@@ -597,7 +597,7 @@ export const voucher = {
             SearchContent: SearchContent,
             PageSize: PageSize,
             PageIndex: PageIndex,
-            brandId: brandId,
+            BrandId: brandId,
             ActionType: ActionType,
             PostActionType: PostActionType,
           },
