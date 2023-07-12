@@ -88,7 +88,7 @@ export const stores = {
     async countStores({ commit }) {
       let BrandId = this.state.stores.BrandId;
       await axios
-        .get(API_URL + "api/stores/count", {
+        .get(API_URL + "api/Stores/count", {
           params: {
             BrandId: BrandId,
           },
@@ -105,7 +105,7 @@ export const stores = {
 
       //# get store depends on pageIndex
       return await axios
-        .get(API_URL + "api/stores", {
+        .get(API_URL + "api/Stores", {
           params: {
             PageSize: PageSize,
             PageIndex: PageIndex,
@@ -162,7 +162,7 @@ export const stores = {
         storeName: this.state.stores.storeName,
         group: this.state.stores.group,
       };
-      await axios.post(API_URL + "api/stores", storeParam).then((response) => {
+      await axios.post(API_URL + "api/Stores", storeParam).then((response) => {
         if (response.status == 200) {
           commit("setPageIndex", 1);
           dispatch("countStores");
@@ -185,7 +185,7 @@ export const stores = {
         };
         let id = param.storeId;
         await axios
-          .put(API_URL + "api/stores/" + id, reqParam)
+          .put(API_URL + "api/Stores/" + id, reqParam)
           .then((response) => {
             if (response.status == 200) {
               console.log("store.js: Save SUCCESS");
@@ -204,7 +204,7 @@ export const stores = {
           delFlg: true,
         };
         await axios
-          .put(API_URL + "api/stores/" + param.storeId, reqParam)
+          .put(API_URL + "api/Stores/" + param.storeId, reqParam)
           .then((response) => {
             if (response.status == 200) {
               console.log("store.js: Delete SUCCESS");
