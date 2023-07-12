@@ -131,13 +131,13 @@ export const stores = {
       let params = {};
       if (storeId) {
         params = {
-          brandID: this.state.stores.BrandId,
+          BrandId: this.state.stores.BrandId,
           storeCode: this.state.stores.storeCode,
           storeId: storeId,
         };
       } else {
         params = {
-          brandID: this.state.stores.BrandId,
+          BrandId: this.state.stores.BrandId,
           storeCode: this.state.stores.storeCode,
         };
       }
@@ -157,7 +157,7 @@ export const stores = {
     },
     async addStore({ commit, dispatch }) {
       let storeParam = {
-        brandId: this.state.stores.BrandId,
+        BrandId: this.state.stores.BrandId,
         storeCode: this.state.stores.storeCode,
         storeName: this.state.stores.storeName,
         group: this.state.stores.group,
@@ -178,7 +178,7 @@ export const stores = {
       for (const param of params) {
         let reqParam = {
           storeId: param.storeId,
-          brandId: param.BrandId,
+          BrandId: param.BrandId,
           storeCode: param.storeCode,
           storeName: param.storeName,
           group: param.group,
