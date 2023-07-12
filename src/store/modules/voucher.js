@@ -16,7 +16,7 @@ export const voucher = {
     assignPromoId: "",
     SearchContent: "",
     voucherType: "",
-    brandId: "",
+    BrandId: "",
     voucherGroup: {},
     voucherForm: {},
     promotionId: "",
@@ -217,7 +217,7 @@ export const voucher = {
       state.vouchers = [];
     },
     setBrandId(state, context) {
-      state.brandId = context;
+      state.BrandId = context;
     },
     setMoreQuantity(state, context) {
       state.moreQuantity = context;
@@ -273,11 +273,11 @@ export const voucher = {
         });
     },
     async getConditions({ commit }) {
-      let brandId = this.state.voucher.brandId;
+      let BrandId = this.state.voucher.BrandId;
       return await axios
         .get(API_URL + "api/condition-rules", {
           params: {
-            brandId: brandId,
+            BrandId: BrandId,
             PageSize: 0,
             PageIndex: 0,
           },
@@ -293,12 +293,12 @@ export const voucher = {
         });
     },
     async getPostAction({ commit }) {
-      let brandId = this.state.voucher.brandId;
+      let BrandId = this.state.voucher.BrandId;
       let postActionType = this.state.voucher.postActionType;
       return await axios
         .get(API_URL + "api/post-actions", {
           params: {
-            brandId: brandId,
+            BrandId: BrandId,
             PageSize: 0,
             PageIndex: 0,
             PostActionType: postActionType,
@@ -316,12 +316,12 @@ export const voucher = {
     },
 
     async getAction({ commit }) {
-      let brandId = this.state.voucher.brandId;
+      let BrandId = this.state.voucher.BrandId;
       let actionType = this.state.voucher.actionType;
       return await axios
         .get(API_URL + "api/actions", {
           params: {
-            brandId: brandId,
+            BrandId: BrandId,
             PageSize: 0,
             PageIndex: 0,
             actionType: actionType,
@@ -560,13 +560,13 @@ export const voucher = {
         });
     },
     async getAvailableVoucher({ commit }) {
-      let brandId = this.state.voucher.brandId;
+      let BrandId = this.state.voucher.BrandId;
       let PageSize = this.state.voucher.availPageSize;
       let PageIndex = this.state.voucher.availPageIndex;
       return await axios
         .get(API_URL + "api/voucher-groups/available", {
           params: {
-            brandId: brandId,
+            BrandId: BrandId,
             PageIndex: PageIndex,
             PageSize: PageSize,
           },
@@ -585,7 +585,7 @@ export const voucher = {
         });
     },
     async getVoucherList({ commit }) {
-      let brandId = this.state.voucher.brandId;
+      let BrandId = this.state.voucher.BrandId;
       let PageSize = this.state.voucher.PageSize;
       let PageIndex = this.state.voucher.PageIndex;
       let SearchContent = this.state.voucher.SearchContent;
@@ -597,7 +597,7 @@ export const voucher = {
             SearchContent: SearchContent,
             PageSize: PageSize,
             PageIndex: PageIndex,
-            BrandId: brandId,
+            BrandId: BrandId,
             ActionType: ActionType,
             PostActionType: PostActionType,
           },
@@ -617,9 +617,9 @@ export const voucher = {
         });
     },
     async getVoucherListForPromo({ commit }) {
-      let brandId = this.state.voucher.brandId;
+      let BrandId = this.state.voucher.BrandId;
       return await axios
-        .get(API_URL + "api/voucher-groups/for-promo/" + brandId)
+        .get(API_URL + "api/voucher-groups/for-promo/" + BrandId)
         .then((response) => {
           if (response.status === 200) {
             let result = response.data;
@@ -633,12 +633,12 @@ export const voucher = {
         });
     },
     async saveVoucherGroup({ commit }) {
-      let brandId = this.state.voucher.brandId;
+      let BrandId = this.state.voucher.BrandId;
       let form = this.state.voucher.voucherForm;
       let promotionId = this.state.voucher.promotionId;
       console.log(form.customCharset);
       let params = {
-        brandId: brandId,
+        BrandId: BrandId,
         voucherName: form.groupName,
         quantity: form.quantity,
         charset: form.charset,
