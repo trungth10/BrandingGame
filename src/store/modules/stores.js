@@ -17,7 +17,7 @@ export const stores = {
     storeName: "",
     group: 0,
     storeId: "",
-    BrandId: "",
+    brandId: "",
   },
   getters: {
     StoreList: (state) => state.storeList,
@@ -65,7 +65,7 @@ export const stores = {
       state.counter = context;
     },
     setBrandId(state, context) {
-      state.BrandId = context;
+      state.brandId = context;
     },
     setStoreId(state, context) {
       state.storeId = context;
@@ -86,11 +86,11 @@ export const stores = {
   },
   actions: {
     async countStores({ commit }) {
-      let BrandId = this.state.stores.BrandId;
+      let brandId = this.state.stores.brandId;
       await axios
         .get(API_URL + "api/stores/count", {
           params: {
-            BrandId: BrandId,
+            brandId: brandId,
           },
         })
         .then((response) => {
@@ -101,7 +101,7 @@ export const stores = {
     async getStoresList({ commit }) {
       let PageSize = this.state.stores.PageSize;
       let PageIndex = this.state.stores.PageIndex;
-      let BrandId = this.state.stores.BrandId;
+      let brandId = this.state.stores.brandId;
 
       //# get store depends on pageIndex
       return await axios
@@ -109,7 +109,7 @@ export const stores = {
           params: {
             PageSize: PageSize,
             PageIndex: PageIndex,
-            BrandId: BrandId,
+            brandId: brandId,
           },
         })
         .then((response) => {
@@ -131,13 +131,13 @@ export const stores = {
       let params = {};
       if (storeId) {
         params = {
-          BrandId: this.state.stores.BrandId,
+          brandId: this.state.stores.brandId,
           storeCode: this.state.stores.storeCode,
           storeId: storeId,
         };
       } else {
         params = {
-          BrandId: this.state.stores.BrandId,
+          brandId: this.state.stores.brandId,
           storeCode: this.state.stores.storeCode,
         };
       }
@@ -157,7 +157,7 @@ export const stores = {
     },
     async addStore({ commit, dispatch }) {
       let storeParam = {
-        BrandId: this.state.stores.BrandId,
+        brandId: this.state.stores.brandId,
         storeCode: this.state.stores.storeCode,
         storeName: this.state.stores.storeName,
         group: this.state.stores.group,
@@ -178,7 +178,7 @@ export const stores = {
       for (const param of params) {
         let reqParam = {
           storeId: param.storeId,
-          BrandId: param.BrandId,
+          brandId: param.brandId,
           storeCode: param.storeCode,
           storeName: param.storeName,
           group: param.group,
