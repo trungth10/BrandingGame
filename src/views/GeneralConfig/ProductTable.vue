@@ -605,6 +605,7 @@ export default {
         });
     },
     getProductCate() {
+      this.$store.commit("product_cate/setBrandId", brandId);
       this.$store
         .dispatch("product_cate/getProductCate")
         .then(() => {
