@@ -40,9 +40,9 @@ export default {
   },
   created() {},
   beforeMount() {
-     let user = this.$session.get("user-info");
-     let brandId = user.brandId;
-     this.$store.commit("promotion/setBrandId", brandId);
+    // let user = this.$session.get("user-info");
+    // let brandId = user.brandId;
+    // this.$store.commit("promotion/setBrandId", brandId);
   },
   methods: {
     addPromotion() {
